@@ -1,29 +1,47 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {
+    MessageSquareMore,
+    LayoutGrid,
+    ScrollText,
+    CalendarDays,
+    ClipboardList,
+    Box,
+    Star
+} from "lucide-react";
 
 export const items = [
     {
         title: "Home",
-        url: "#",
-        icon: Home,
+        url: "/vi/dashboard",
+        icon: LayoutGrid,
     },
     {
-        title: "Inbox",
-        url: "#",
-        icon: Inbox,
+        title: "Orders",
+        url: "/vi/orders",
+        icon: ScrollText,
+    },
+    {
+        title: "Messages",
+        url: "/vi/messages",
+        icon: MessageSquareMore,
     },
     {
         title: "Calendar",
-        url: "#",
-        icon: Calendar,
+        url: "/vi/calendar",
+        icon: CalendarDays,
     },
     {
-        title: "Search",
-        url: "#",
-        icon: Search,
+        title: "Menu",
+        url: "/vi/menu",
+        icon: ClipboardList,
     },
     {
-        title: "Settings",
-        url: "#",
-        icon: Settings,
+        title: "Inventory",
+        url: "/vi/inventory",
+        icon: Box,
+    },
+    {
+        title: "Reviews",
+        url: "/vi/reviews",
+        icon: Star,
     },
 ];

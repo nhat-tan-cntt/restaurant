@@ -47,7 +47,7 @@ export default async function RootLayout({
         <>
             <html lang={locale} suppressHydrationWarning>
                 <body
-                    className={`${geistSans.variable} ${geistMono.variable} antialiaseds min-h-screen w-screen flex`}
+                    className={`${geistSans.variable} ${geistMono.variable} antialiaseds`}
                 >
                     <NextIntlClientProvider>
                         <ThemeProvider
@@ -71,7 +71,7 @@ export default async function RootLayout({
                                             <ThemeToggle />
                                         </div>
                                     </header>
-                                    <main className="h-full w-full flex">
+                                    <main>
                                         {children}
                                     </main>
                                 </SidebarInset>
