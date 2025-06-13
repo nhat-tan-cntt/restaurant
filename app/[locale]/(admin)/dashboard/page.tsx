@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-export default function Home() {
+export default function Dashboard() {
     const t = useTranslations("HomePage");
 
     return (
