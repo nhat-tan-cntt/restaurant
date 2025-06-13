@@ -9,10 +9,10 @@ export default function Order() {
                     <div className="grid gap-3">
                         <div className="grid gap-4 lg:grid-cols-3">
                             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4">
-                                <div className="bg-muted/50 h-32 rounded-xl"></div>
-                                <div className="bg-muted/50 h-32 rounded-xl"></div>
-                                <div className="bg-muted/50 h-32 rounded-xl"></div>
-                                <div className="bg-muted/50 h-32 rounded-xl"></div>
+                                <div className="bg-muted/50 min-h-32 rounded-xl"></div>
+                                <div className="bg-muted/50 min-h-32 rounded-xl"></div>
+                                <div className="bg-muted/50 min-h-32 rounded-xl"></div>
+                                <div className="bg-muted/50 min-h-32 rounded-xl"></div>
                             </div>
                             <div className="grid md:grid-cols-2 lg:col-span-2 gap-4 ">
                                 <div className="bg-muted/50 rounded-xl min-h-60"></div>
@@ -24,7 +24,7 @@ export default function Order() {
             </div>
             <div className="grid gap-3 md:grid-cols-3">
                 <div className="md:col-span-3">
-                    <div className="bg-muted/50 h-[550px] rounded-xl"></div>
+                    <div className="bg-muted/50 min-h-[550px] rounded-xl"></div>
                 </div>
             </div>
         </main >
