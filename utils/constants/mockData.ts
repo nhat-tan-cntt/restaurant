@@ -5,43 +5,55 @@ import {
     CalendarDays,
     ClipboardList,
     Box,
-    Star
+    Star,
+    SquareTerminal,
 } from "lucide-react";
 
 export const items = [
     {
-        title: "Home",
-        url: "/vi/dashboard",
+        title: "dashboard",
+        url: "/dashboard",
         icon: LayoutGrid,
     },
     {
-        title: "Orders",
-        url: "/vi/orders",
+        title: "orders",
+        url: "/orders",
         icon: ScrollText,
     },
     {
-        title: "Messages",
-        url: "/vi/messages",
+        title: "messages",
+        url: "/messages",
         icon: MessageSquareMore,
     },
     {
-        title: "Calendar",
-        url: "/vi/calendar",
+        title: "calendar",
+        url: "/calendar",
         icon: CalendarDays,
     },
     {
-        title: "Menu",
-        url: "/vi/menu",
+        title: "menu",
+        url: "/menu",
         icon: ClipboardList,
     },
     {
-        title: "Inventory",
-        url: "/vi/inventory",
+        title: "inventory",
+        isActive: true,
+        url: "#",
         icon: Box,
+        childrens: [
+            {
+                title: "inventory",
+                url: "/inventory",
+            },
+            {
+                title: "purchase-order",
+                url: "/purchase-order",
+            },
+        ],
     },
     {
-        title: "Reviews",
-        url: "/vi/reviews",
+        title: "reviews",
+        url: "/reviews",
         icon: Star,
     },
 ];

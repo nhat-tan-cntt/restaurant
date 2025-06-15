@@ -1,7 +1,15 @@
 {
   "_": "en",
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "messages": "Messages", 
+    "calendar": "Calendar",
+    "menu": "Menu",
+    "inventory": "Inventory",
+    "purchase-order": "Purchase Order",
+    "reviews": "Reviews",
+    "settings": "Settings",
+    "language": "Language"
   }
 }

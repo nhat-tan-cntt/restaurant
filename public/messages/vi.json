@@ -1,7 +1,15 @@
 {
   "_": "vi",
-  "HomePage": {
-    "title": "Xin chào thế giới!",
-    "about": "Đi đến trang giới thiệu"
+  "sidebar": {
+    "dashboard": "Bảng điều khiển",
+    "orders": "Đơn hàng", 
+    "messages": "Tin nhắn",
+    "calendar": "Lịch",
+    "menu": "Thực đơn",
+    "inventory": "Kho hàng",
+    "purchase-order": "Đơn đặt hàng",
+    "reviews": "Đánh giá",
+    "settings": "Cài đặt",
+    "language": "Ngôn ngữ"
   }
 }

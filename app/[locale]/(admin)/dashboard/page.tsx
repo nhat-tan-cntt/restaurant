@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 
 export default function Dashboard() {
-    const t = useTranslations("HomePage");
+    // const t = useTranslations("HomePage");
 
     return (
         <main className="flex flex-1 flex-col gap-3 p-4 pt-0">
