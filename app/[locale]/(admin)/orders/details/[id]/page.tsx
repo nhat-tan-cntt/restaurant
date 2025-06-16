@@ -1,5 +1,6 @@
 
-export default function Detail({ params }: { params: { id: string } }) {
+export default async function Detail({ params }: { params: { id: string } }) {
+    const { id } = await params;
 
     return (
         <main className="flex flex-1 flex-col gap-3 p-4 pt-0">
@@ -11,7 +12,7 @@ export default function Detail({ params }: { params: { id: string } }) {
                                 <div className="hidden md:grid bg-muted/50 rounded-xl p-4 min-h-[90vh] grid-rows-2 gap-4">
                                     <div className="rounded-xl p-4 overflow-auto bg-background flex items-center justify-center text-center font-bold text-muted-foreground">
                                         <div>
-                                            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Order ID {params.id}</h1>
+                                            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Order ID {id}</h1>
                                             <br />BẢNG DỮ LIỆU (TABLE)</div>
                                     </div>
 
