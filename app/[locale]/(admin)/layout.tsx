@@ -17,8 +17,11 @@ import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Bell } from "lucide-react";
+import { Bell, LogOut } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Label } from "@/components/ui/label";
+import HeaderAdmin from "@/components/header/header-admin";
 
 const geistSans = Inter({
     variable: "--font-geist-sans",
@@ -64,45 +67,7 @@ export default async function RootLayout({
                             <SidebarProvider>
                                 <AppSidebar />
                                 <SidebarInset>
-                                    <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
-                                        <div className="flex items-center gap-2 px-4">
-                                            <SidebarTrigger className="-ml-1" />
-                                            <Separator
-                                                orientation="vertical"
-                                                className="mr-2 data-[orientation=vertical]:h-4"
-                                            />
-                                        </div>
-                                        <div className="flex items-center gap-4 px-4">
-                                            <ThemeToggle />
-                                            <Button
-                                                variant="ghost"
-                                                size="icon"
-                                                className="relative rounded-xl bg-muted p-0 hover:bg-muted/80"
-                                            >
-                                                <div className="rounded-xl bg-muted p-3">
-                                                    <Bell className="w-5 h-5 text-muted-foreground" />
-                                                </div>
-                                                <Badge
-                                                    className="absolute top-0 right-0 w-4 h-4 p-0 flex items-center justify-center rounded-full bg-orange-500 text-white text-[10px] font-bold shadow-sm"
-                                                >
-                                                    3
-                                                </Badge>
-                                            </Button>
-                                            <Card className="flex items-center gap-4 p-3 rounded-2xl bg-background border-none shadow-none">
-                                                <div>
-                                                    <CardTitle className="text-base">Orlando Laurentius</CardTitle>
-                                                    <CardDescription>Admin</CardDescription>
-                                                </div>
-                                                <Avatar className="rounded-lg">
-                                                    <AvatarImage
-                                                        src="https://github.com/evilrabbit.png"
-                                                        alt="@evilrabbit"
-                                                    />
-                                                    <AvatarFallback className="rounded-lg">OL</AvatarFallback>
-                                                </Avatar>
-                                            </Card>
-                                        </div>
-                                    </header>
+                                    <HeaderAdmin />
                                     <main>{children}</main>
                                 </SidebarInset>
                             </SidebarProvider>

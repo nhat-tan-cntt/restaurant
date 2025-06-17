@@ -31,10 +31,10 @@ import { Link } from "@/i18n/navigation";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     const t = useTranslations("sidebar");
     const pathname = usePathname();
-    const cleanPath = getPathAfterLocale(pathname, [...routing.locales]); // Bỏ locale
+    const cleanPath = getPathAfterLocale(pathname, [...routing.locales]);
 
     return (
-        <Sidebar collapsible="icon" {...props}>
+        <Sidebar variant="floating" collapsible="icon" {...props}>
             <SidebarHeader>
                 <SidebarMenuButton
                     size="lg"
@@ -70,11 +70,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                                 {item.childrens ? (
                                                     <CollapsibleTrigger asChild>
                                                         <div
-                                                            className={`flex items-center gap-2 px-3 py-2 rounded-xl ${
-                                                                isActive
+                                                            className={`flex items-center gap-2 px-3 py-2 rounded-xl ${isActive
                                                                     ? "bg-orange-100 text-orange-500 font-medium"
                                                                     : "text-gray-500 hover:text-orange-500"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             {item.icon && (
                                                                 <item.icon className="w-5 h-5" />
@@ -90,11 +89,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                                 ) : (
                                                     <Link
                                                         href={item.url}
-                                                        className={`flex items-center gap-2 px-3 py-2 rounded-xl ${
-                                                            isActive
+                                                        className={`flex items-center gap-2 px-3 py-2 rounded-xl ${isActive
                                                                 ? "bg-orange-100 text-orange-500 font-medium"
                                                                 : "text-gray-500 hover:text-orange-500"
-                                                        }`}
+                                                            }`}
                                                     >
                                                         {item.icon && (
                                                             <item.icon className="w-5 h-5" />
@@ -122,19 +120,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                                                         key={
                                                                             subItem.title
                                                                         }
-                                                                        className={`relative ${
-                                                                            isActiveSub
+                                                                        className={`relative ${isActiveSub
                                                                                 ? "before:absolute before:left-[-10px] before:top-0 before:bottom-0 before:w-[2px] before:bg-orange-500"
                                                                                 : ""
-                                                                        }`}
+                                                                            }`}
                                                                     >
                                                                         <SidebarMenuSubButton
                                                                             asChild
-                                                                            className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 ${
-                                                                                isActiveSub
+                                                                            className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 ${isActiveSub
                                                                                     ? "bg-orange-100 text-orange-500 font-semibold"
                                                                                     : "text-muted-foreground hover:bg-muted/50"
-                                                                            }`}
+                                                                                }`}
                                                                         >
                                                                             <Link
                                                                                 href={
@@ -168,11 +164,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <SidebarMenuButton asChild>
                     <Link
                         href="/settings"
-                        className={`flex items-center gap-2 px-3 py-2 rounded-xl ${
-                            isPathActive(cleanPath, "/settings")
+                        className={`flex items-center gap-2 px-3 py-2 rounded-xl ${isPathActive(cleanPath, "/settings")
                                 ? "bg-orange-100 text-orange-500 font-medium"
                                 : "text-gray-500 hover:text-orange-500"
-                        }`}
+                            }`}
                     >
                         <Settings />
                         <span>{t("settings")}</span>
