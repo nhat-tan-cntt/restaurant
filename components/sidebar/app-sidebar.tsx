@@ -34,7 +34,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     const cleanPath = getPathAfterLocale(pathname, [...routing.locales]);
 
     return (
-        <Sidebar variant="floating" collapsible="icon" {...props}>
+        <Sidebar variant="sidebar" collapsible="icon" {...props}>
             <SidebarHeader>
                 <SidebarMenuButton
                     size="lg"
@@ -71,8 +71,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                                     <CollapsibleTrigger asChild>
                                                         <div
                                                             className={`flex items-center gap-2 px-3 py-2 rounded-xl ${isActive
-                                                                    ? "bg-orange-100 text-orange-500 font-medium"
-                                                                    : "text-gray-500 hover:text-orange-500"
+                                                                ? "bg-orange-100 text-orange-500 font-medium"
+                                                                : "text-gray-500 hover:text-orange-500"
                                                                 }`}
                                                         >
                                                             {item.icon && (
@@ -90,8 +90,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                                     <Link
                                                         href={item.url}
                                                         className={`flex items-center gap-2 px-3 py-2 rounded-xl ${isActive
-                                                                ? "bg-orange-100 text-orange-500 font-medium"
-                                                                : "text-gray-500 hover:text-orange-500"
+                                                            ? "bg-orange-100 text-orange-500 font-medium"
+                                                            : "text-gray-500 hover:text-orange-500"
                                                             }`}
                                                     >
                                                         {item.icon && (
@@ -121,15 +121,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                                                             subItem.title
                                                                         }
                                                                         className={`relative ${isActiveSub
-                                                                                ? "before:absolute before:left-[-10px] before:top-0 before:bottom-0 before:w-[2px] before:bg-orange-500"
-                                                                                : ""
+                                                                            ? "before:absolute before:left-[-10px] before:top-0 before:bottom-0 before:w-[2px] before:bg-orange-500"
+                                                                            : ""
                                                                             }`}
                                                                     >
                                                                         <SidebarMenuSubButton
                                                                             asChild
                                                                             className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-200 ${isActiveSub
-                                                                                    ? "bg-orange-100 text-orange-500 font-semibold"
-                                                                                    : "text-muted-foreground hover:bg-muted/50"
+                                                                                ? "bg-orange-100 text-orange-500 font-semibold"
+                                                                                : "text-muted-foreground hover:bg-muted/50"
                                                                                 }`}
                                                                         >
                                                                             <Link
@@ -165,8 +165,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <Link
                         href="/settings"
                         className={`flex items-center gap-2 px-3 py-2 rounded-xl ${isPathActive(cleanPath, "/settings")
-                                ? "bg-orange-100 text-orange-500 font-medium"
-                                : "text-gray-500 hover:text-orange-500"
+                            ? "bg-orange-100 text-orange-500 font-medium"
+                            : "text-gray-500 hover:text-orange-500"
                             }`}
                     >
                         <Settings />

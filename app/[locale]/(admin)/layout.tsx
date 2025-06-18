@@ -66,9 +66,9 @@ export default async function RootLayout({
                         >
                             <SidebarProvider>
                                 <AppSidebar />
-                                <SidebarInset>
+                                <SidebarInset className="flex flex-col h-screen overflow-hidden">
                                     <HeaderAdmin />
-                                    <main>{children}</main>
+                                    <main className="flex flex-col h-screen overflow-y-auto">{children}</main>
                                 </SidebarInset>
                             </SidebarProvider>
                         </ThemeProvider>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Pagination, PaginationContent, PaginationItem, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { useState } from "react";
 
 const products = [
@@ -27,27 +27,28 @@ export default function Menu() {
 
     return (
         <main className="flex flex-1 flex-col gap-3 p-4 pt-0">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-0 lg:gap-5">
+            <div className="grid md:grid-cols-[260px_1fr] gap-5">
                 {/* Filter column */}
-                <div className="hidden md:block col-span-1 md:border-r md:border-transparent lg:border-none md:pr-0 lg:pr-0">
-                    <div className="bg-muted/50 min-h-[90vh] rounded-none lg:rounded-xl" />
-                </div>
+                <aside className="hidden md:block bg-muted/50 min-h-full rounded-xl px-4 py-6">
+                    <div className="bg-muted/50 min-h-full rounded-none lg:rounded-xl" />
+                </aside>
 
-                <div className="md:col-span-3 px-5 pt-5 bg-muted/50 rounded-xl">
+                <div className="px-5 pt-5 bg-muted/50 rounded-xl">
                     <div className="flex flex-col">
-                        <div className="grid grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-3 flex-1">
+                        {/* Grid sản phẩm */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                             {currentItems.map((item, idx) => (
                                 <div
                                     key={idx}
                                     className="bg-neutral-900 text-white rounded-xl p-4 border border-neutral-800 flex flex-col h-full"
                                 >
-                                    {/* Dùng container flex-1 để ảnh co theo chiều cao còn lại */}
+                                    {/* Hình ảnh */}
                                     <div className="flex-1">
-                                        <div className="aspect-[7/3] bg-neutral-800 rounded-lg" />
+                                        <div className="aspect-[4/3] bg-neutral-800 rounded-lg" />
                                     </div>
 
-                                    {/* Nội dung luôn ở đáy */}
-                                    <div className="mt-4">
+                                    {/* Nội dung */}
+                                    <div className="mt-4 space-y-1">
                                         <div className="text-base font-semibold">{item.name}</div>
                                         <div className="text-orange-500 font-bold">{item.price}</div>
                                     </div>
@@ -55,21 +56,22 @@ export default function Menu() {
                             ))}
                         </div>
 
-                        <div className="w-full py-4 flex items-center justify-between">
-                            <div className="text-sm min-w-44 text-muted-foreground">
-                                Đang hiển thị {currentItems.length} trong số {currentItems.length}
+                        {/* Pagination */}
+                        <div className="w-full py-4 flex flex-col md:flex-row items-center justify-between gap-3">
+                            <div className="hidden lg:block text-sm min-w-44 text-muted-foreground">
+                                Đang hiển thị {currentItems.length} trong số {products.length}
                             </div>
 
-                            <Pagination className="justify-end">
+                            <Pagination className="min-w-28 justify-center md:justify-end">
                                 <PaginationContent>
                                     <PaginationItem>
-                                        <PaginationPrevious onClick={() => setPage(p => Math.max(1, p - 1))} />
+                                        <PaginationPrevious className="[&>span]:sr-only p-0" onClick={() => setPage(p => Math.max(1, p - 1))} />
                                     </PaginationItem>
                                     <PaginationItem className="px-4 text-sm text-muted-foreground">
-                                        Page {page} / {totalPages}
+                                        <PaginationLink href="#">{page}</PaginationLink>
                                     </PaginationItem>
                                     <PaginationItem>
-                                        <PaginationNext onClick={() => setPage(p => Math.min(totalPages, p + 1))} />
+                                        <PaginationNext className="[&>span]:sr-only p-0" onClick={() => setPage(p => Math.min(totalPages, p + 1))} />
                                     </PaginationItem>
                                 </PaginationContent>
                             </Pagination>
