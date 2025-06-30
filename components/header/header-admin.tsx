@@ -1,8 +1,10 @@
-import { SidebarTrigger } from "@/components/ui/sidebar"
-import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
-import { Bell, LogOut, Search, Menu, UtensilsCrossed } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+"use client";
+
+import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Bell, LogOut, Search, Menu, UtensilsCrossed } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -10,37 +12,40 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { CardDescription, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Label } from "@/components/ui/label"
-import { ThemeToggle } from "@/components/theme/theme-toggle"
-import { Command, CommandInput } from "@/components/ui/command"
+} from "@/components/ui/dropdown-menu";
+import { CardDescription, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Label } from "@/components/ui/label";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { Command, CommandInput } from "@/components/ui/command";
 
 export default function HeaderAdmin() {
     return (
         <header className="flex justify-between h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 px-4">
-            {/* Left section */}
             <div className="hidden md:flex items-center gap-2">
                 <SidebarTrigger className="-ml-1" />
-                <Separator orientation="vertical" className="mr-2 data-[orientation=vertical]:h-4" />
+                <Separator
+                    orientation="vertical"
+                    className="mr-2 data-[orientation=vertical]:h-4"
+                />
             </div>
 
-            {/* Right section (Tablet & Desktop) */}
             <div className="hidden md:flex items-center gap-4">
-                {/* Search: full input on lg, icon on md */}
                 <div className="hidden lg:block">
                     <Command className="shadow-md">
                         <CommandInput placeholder="Search anything" />
                     </Command>
                 </div>
                 <div className="block lg:hidden">
-                    <Button size="icon" variant="ghost" className="rounded-xl bg-muted p-2 shadow-md">
+                    <Button
+                        size="icon"
+                        variant="ghost"
+                        className="rounded-xl bg-muted p-2 shadow-md"
+                    >
                         <Search className="w-5 h-5 text-muted-foreground" />
                     </Button>
                 </div>
 
-                {/* Notification */}
                 <Button
                     variant="ghost"
                     size="icon"
@@ -54,7 +59,6 @@ export default function HeaderAdmin() {
                     </Badge>
                 </Button>
 
-                {/* Avatar & User */}
                 <DropdownMenu>
                     <DropdownMenuTrigger className="flex text-left items-center gap-4 p-3 rounded-2xl bg-background border-none shadow-none">
                         <div className="hidden lg:block min-w-32 max-w-[160px]">
@@ -65,15 +69,22 @@ export default function HeaderAdmin() {
                         </div>
 
                         <Avatar className="rounded-lg shadow-md">
-                            <AvatarImage src="https://github.com/evilrabbit.png" alt="@evilrabbit" />
-                            <AvatarFallback className="rounded-lg">OL</AvatarFallback>
+                            <AvatarImage
+                                src="https://github.com/evilrabbit.png"
+                                alt="@evilrabbit"
+                            />
+                            <AvatarFallback className="rounded-lg">
+                                OL
+                            </AvatarFallback>
                         </Avatar>
                     </DropdownMenuTrigger>
 
                     <DropdownMenuContent>
                         <DropdownMenuLabel>
                             <div>
-                                <CardTitle className="text-base">Orlando Laurentius</CardTitle>
+                                <CardTitle className="text-base">
+                                    Orlando Laurentius
+                                </CardTitle>
                                 <CardDescription>Admin</CardDescription>
                             </div>
                         </DropdownMenuLabel>
@@ -92,18 +103,15 @@ export default function HeaderAdmin() {
                 </DropdownMenu>
             </div>
 
-            {/* Mobile: Menu Icon */}
             <div className="flex items-center justify-between w-full md:hidden">
-                {/* Left icon: UtensilsCrossed */}
                 <div className="bg-sidebar-primary text-sidebar-primary-foreground flex size-8 items-center justify-center rounded-lg">
                     <UtensilsCrossed className="size-4" />
                 </div>
 
-                {/* Right icon: Menu */}
                 <Button variant="ghost" size="icon">
                     <Menu className="w-5 h-5" />
                 </Button>
             </div>
         </header>
-    )
+    );
 }
