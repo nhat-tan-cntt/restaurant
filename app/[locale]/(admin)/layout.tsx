@@ -13,7 +13,7 @@ import {
     SidebarInset,
 } from "@/components/ui/sidebar";
 import "@/styles/globals.css";
-import { AppSidebar } from "@/components/sidebar/app-sidebar";
+import { AppSidebar } from "@/components/sidebar/AppSidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,7 @@ import { Bell, LogOut } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Label } from "@/components/ui/label";
-import HeaderAdmin from "@/components/header/header-admin";
+import HeaderAdmin from "@/components/header/HeaderAdmin";
 
 const geistSans = Inter({
     variable: "--font-geist-sans",

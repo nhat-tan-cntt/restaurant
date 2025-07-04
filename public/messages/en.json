@@ -1,9 +1,15 @@
 {
   "_": "en",
+  "common": {
+    "search": "Search anything",
+    "this_today": "Today",
+    "this_week": "This Week",
+    "this_month": "This Month"
+  },
   "sidebar": {
     "dashboard": "Dashboard",
     "orders": "Orders",
-    "messages": "Messages", 
+    "messages": "Messages",
     "calendar": "Calendar",
     "menu": "Menu",
     "inventory": "Inventory",
@@ -11,5 +17,73 @@
     "reviews": "Reviews",
     "settings": "Settings",
     "language": "Language"
+  },
+  "header": {
+    "label_hi": "Hello Orlando, welcome back!",
+    "customer_orders": "Customer Orders",
+    "order_details": "Order Details"
+
+  },
+  "dashboard": {
+    "title_total_orders": "Total Orders",
+    "title_total_customer": "Total Customer",
+    "title_total_revenue": "Total Revenue",
+    "title_trending_menus": "Trending Menus",
+    "title_top_categories": "Top Categories",
+    "title_orders_overview": "Orders Overview",
+    "title_order_types": "Order Types",
+    "title_recent_orders": "Recent Orders",
+    "btn_see_all_orders": "See All Orders",
+    "title_customer_reviews": "Customer Reviews",
+    "btn_see_more_reviews": "See More Reviews"
+  },
+  "orders": {
+    "all": "All",
+    "tab_on_process": "On Process",
+    "tab_completed": "Completed",
+    "tab_canceled": "Canceled",
+    "table_order_id": "Order ID",
+    "table_date": "Date",
+    "table_customer": "Customer",
+    "table_order_type": "Order Type",
+    "table_address": "Address",
+    "table_qty": "Qty",
+    "table_amount": "Amount",
+    "table_status": "Status",
+    "title_order_id": "Order ID",
+    "title_order_list": "Order List",
+    "table_item": "Item",
+    "table_notes": "Notes",
+    "table_price": "Price",
+    "table_total": "Total",
+    "table_total_amount": "Total Amount",
+    "title_customer": "Customer",
+    "btn_send_a_message": "Send A Message",
+    "btn_make_a_call": "Make A Call",
+    "title_order_tracking": "Order Tracking",
+    "title_delivered": "Delivered",
+    "title_out_for_delivery": "Out for Delivery",
+    "title_preparing_food": "Preparing Food",
+    "title_order_confirmed": "Order Confirmed",
+    "title_order_placed": "Order Placed",
+    "title_driver": "Driver"
+  },
+   "messages": {
+
+  },
+  "calender": {
+
+  },
+  "menu": {
+
+  },
+  "inventory": {
+
+  },
+  "purchase_order": {
+
+  },
+  "reviews": {
+
   }
 }

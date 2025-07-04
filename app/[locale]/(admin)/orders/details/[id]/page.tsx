@@ -1,5 +1,5 @@
 
-export default async function Detail({ params }: { params: { id: string } }) {
+export default async function PageDetail({ params }: { params: { id: string } }) {
     const { id } = await params;
 
     return (

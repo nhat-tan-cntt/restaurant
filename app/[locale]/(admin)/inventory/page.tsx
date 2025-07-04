@@ -22,7 +22,7 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-export default function Inventory() {
+export default function PageInventory() {
     return (
         <main className="flex flex-1 flex-col gap-4 p-4 pt-0">
             <div className="grid gap-5 grid-cols-1 lg:grid-cols-2">

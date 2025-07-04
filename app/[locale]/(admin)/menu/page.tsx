@@ -18,7 +18,7 @@ const products = [
     { name: "Caesar Salad", price: "$7.00" },
 ];
 
-export default function Menu() {
+export default function PageMenu() {
     const [page, setPage] = useState(1)
     const pageSize = 9
     const totalPages = Math.ceil(products.length / pageSize)
@@ -40,11 +40,11 @@ export default function Menu() {
                             {currentItems.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-neutral-900 text-white rounded-xl p-4 border border-neutral-800 flex flex-col h-full"
+                                    className="bg-muted/50 rounded-xl p-4 border border-neutral-800 flex flex-col h-full"
                                 >
                                     {/* Hình ảnh */}
                                     <div className="flex-1">
-                                        <div className="aspect-[4/3] bg-neutral-800 rounded-lg" />
+                                        <div className="aspect-[4/3] bg-muted/50 rounded-lg" />
                                     </div>
 
                                     {/* Nội dung */}
@@ -58,7 +58,7 @@ export default function Menu() {
 
                         {/* Pagination */}
                         <div className="w-full py-4 flex flex-col md:flex-row items-center justify-between gap-3">
-                            <div className="hidden lg:block text-sm min-w-44 text-muted-foreground">
+                            <div className="hidden lg:block text-sm min-w-44">
                                 Đang hiển thị {currentItems.length} trong số {products.length}
                             </div>
 
@@ -67,7 +67,7 @@ export default function Menu() {
                                     <PaginationItem>
                                         <PaginationPrevious className="[&>span]:sr-only p-0" onClick={() => setPage(p => Math.max(1, p - 1))} />
                                     </PaginationItem>
-                                    <PaginationItem className="px-4 text-sm text-muted-foreground">
+                                    <PaginationItem className="px-4 text-sm">
                                         <PaginationLink href="#">{page}</PaginationLink>
                                     </PaginationItem>
                                     <PaginationItem>
