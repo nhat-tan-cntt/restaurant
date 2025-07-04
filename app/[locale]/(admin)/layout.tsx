@@ -1,9 +1,9 @@
 "use client";
 
+import HeaderAdmin from "@/components/header/HeaderAdmin";
+import { AppSidebar } from "@/components/sidebar/AppSidebar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/sidebar/app-sidebar";
-import HeaderAdmin from "@/components/header/header-admin";
 import { useEffect, useState } from "react";
 
 export default function AdminLayout({
