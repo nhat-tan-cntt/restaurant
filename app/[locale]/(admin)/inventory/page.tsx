@@ -2,6 +2,7 @@ import { ChartConfig } from "@/components/ui/chart";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
 import { ChartBlock } from "./chart-block";
+import { inventoryMockData } from "@/utils/constants/mockData";
 
 const chartData = [
     { month: "January", desktop: 186, mobile: 80 },
@@ -10,7 +11,7 @@ const chartData = [
     { month: "April", desktop: 73, mobile: 190 },
     { month: "May", desktop: 209, mobile: 130 },
     { month: "June", desktop: 214, mobile: 140 },
-]
+];
 const chartConfig = {
     desktop: {
         label: "Desktop",
@@ -20,7 +21,7 @@ const chartConfig = {
         label: "Mobile",
         color: "#fff6e0",
     },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function PageInventory() {
     return (
@@ -29,10 +30,13 @@ export default function PageInventory() {
                 <div className="grid lg:col-span-2 gap-4">
                     <div className="grid gap-4 lg:grid-cols-2">
                         <div className="grid lg:grid-cols-2 lg:col-span-2 gap-4 ">
-                            <div className="bg-muted/50 rounded-xl min-h-60">
-                                <ChartBlock data={chartData} config={chartConfig} />
+                            <div className="bg-muted/50 rounded-xl">
+                                <ChartBlock
+                                    data={chartData}
+                                    config={chartConfig}
+                                />
                             </div>
-                            <div className="bg-muted/50 rounded-xl min-h-60">
+                            <div className="bg-muted/50 rounded-xl">
                                 {/* <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
                                     <BarChart accessibilityLayer data={chartData}>
                                         <CartesianGrid vertical={false} />
@@ -48,7 +52,10 @@ export default function PageInventory() {
                                         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
                                     </BarChart>
                                 </ChartContainer> */}
-                                <ChartBlock data={chartData} config={chartConfig} />
+                                <ChartBlock
+                                    data={chartData}
+                                    config={chartConfig}
+                                />
                             </div>
                         </div>
                     </div>
@@ -56,13 +63,16 @@ export default function PageInventory() {
             </div>
             <div className="grid gap-3 md:grid-cols-3">
                 <div className="md:col-span-3">
-                    <div className="bg-muted/50 min-h-[550px] rounded-xl">
+                    <div className="bg-muted/50 min-h-[450px] rounded-xl">
                         <div className="container mx-auto py-10">
-                            <DataTable columns={columns} data={[]} />
+                            <DataTable
+                                columns={columns}
+                                data={inventoryMockData}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-        </main >
+        </main>
     );
 }
